@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "lib": ["es2017", "dom"],
+    "target": "es2015",
+    "moduleResolution":"node",
+    "types": ["node"]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
