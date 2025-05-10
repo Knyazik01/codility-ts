@@ -17,7 +17,7 @@
   * Performance:	Not assessed
 */
 
-// core solution
+// Core solution
 function solution(N: number): number {
   const binaryNumber: string = N.toString(2);
   let maxGap: number = 0;
@@ -39,12 +39,14 @@ function solution(N: number): number {
   return maxGap;
 }
 
-// tricky solution (RegExp)
-// * Codility analysis: https://app.codility.com/demo/results/trainingZGV25T-Q9T/
-// * Task score:	100%
+/*
+  Tricky solution (RegExp)
+  * Codility analysis: https://app.codility.com/demo/results/trainingZGV25T-Q9T/
+  * Task score:	100%
 
-// * Correctness:	100%
-// * Performance:	Not assessed
+  * Correctness:	100%
+  * Performance:	Not assessed
+*/
 
 const trickySolution = (N: number): number => {
   const binaryNumber: string = N.toString(2);
