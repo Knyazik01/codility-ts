@@ -18,7 +18,7 @@
 */
 
 // Core solution
-function solution(N: number): number {
+export function solution(N: number): number {
   const binaryNumber: string = N.toString(2);
   let maxGap: number = 0;
 
@@ -48,7 +48,7 @@ function solution(N: number): number {
   * Performance:	Not assessed
 */
 
-const trickySolution = (N: number): number => {
+export function trickySolution(N: number): number {
   const binaryNumber: string = N.toString(2);
   let maxGap: number = 0;
   const match = binaryNumber.match(/(?<=1)0+(?=1)/g) ?? [];
