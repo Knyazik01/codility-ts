@@ -18,7 +18,7 @@
 */
 
 // Core solution
-function solution(A: number[], K: number): number[] {
+export function solution(A: number[], K: number): number[] {
   const count: number = A.length;
   // calculate only needed moves: remove full array rotations
   const realRotation = K % count;
@@ -57,7 +57,7 @@ function solution(A: number[], K: number): number[] {
   * Performance:	Not assessed
 */
 
-function trickySolution(A: number[], K: number): number[] {
+export function trickySolution(A: number[], K: number): number[] {
   const realRotation = K % A.length;
   return realRotation ? [
     ...A.slice(-realRotation),
