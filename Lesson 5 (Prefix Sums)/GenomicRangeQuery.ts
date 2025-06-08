@@ -26,7 +26,7 @@ const IMPACT_FACTOR: { [key in ImpactFactor]: number } = {
   T: 4,
 } as const;
 
-function solution(S: string, P: number[], Q: number[]): number[] {
+export function solution(S: string, P: number[], Q: number[]): number[] {
   const indexesOfImpactFactors: { [key in ImpactFactor]: number[] } = {
     A: [],
     C: [],
