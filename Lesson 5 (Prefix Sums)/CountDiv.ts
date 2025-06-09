@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 08.06.2025
+ * Copyright (c) 08.06.2025-09.06.2025
  * Created by Viktor Kniahnitskyi
  *
  * GitHub: https://github.com/Knyazik01
@@ -10,7 +10,7 @@
   URL: https://app.codility.com/programmers/lessons/5-prefix_sums/count_div/
   Level: Medium
 
-  * Codility analysis: https://app.codility.com/demo/results/trainingGDFQJT-VUN/
+  * Codility analysis: https://app.codility.com/demo/results/trainingTQGPUS-AFD/
   * Task score:	  100%
 
   * Correctness:	100%
@@ -19,6 +19,24 @@
 
 // Core solution
 export function solution(A: number, B: number, K: number): number {
+  // count of elements before the number N (included itself, if N % K === 0) dividable to K can be calculated with `N div K` = Math.floor(N / K)
+  // count between B (includes) and A (will be excluded) dividable to K can be calculated as difference between their `div`s:
+  // Math.floor(B / K) - Math.floor(A / K)
+  // So, we need to add `A` to the counter manually if A is dividable to K - this will be a prefix sum
+
+  const prefixSum: number = A % K === 0 ? 1 : 0; // to include first item if it's dividable
+  return Math.floor(B / K) - Math.floor(A / K) + prefixSum;
+}
+
+/*
+  Tricky solution (without offset)
+  * Codility analysis: https://app.codility.com/demo/results/trainingGDFQJT-VUN/
+  * Task score:	100%
+
+  * Correctness:	100%
+  * Performance:	100%
+*/
+export function trickySolution(A: number, B: number, K: number): number {
   // to find next nearest dividable number to A - we need add `K - (A % K)` to A
   // [this is rest which is needed for A to make it dividable to K]
   // In this case A + `(K - (A % K))` = A + c where c can be [1...K] (c = K if A % K === 0)
