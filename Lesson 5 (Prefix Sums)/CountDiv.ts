@@ -31,7 +31,7 @@ export function solution(A: number, B: number, K: number): number {
 /*
   Tricky solution (without offset)
   * Codility analysis: https://app.codility.com/demo/results/trainingGDFQJT-VUN/
-  * Task score:	100%
+  * Task score:	  100%
 
   * Correctness:	100%
   * Performance:	100%
