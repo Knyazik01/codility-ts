@@ -42,7 +42,7 @@ export function solution(N: number): number {
 /*
   Tricky solution (RegExp)
   * Codility analysis: https://app.codility.com/demo/results/trainingZGV25T-Q9T/
-  * Task score:	100%
+  * Task score:	  100%
 
   * Correctness:	100%
   * Performance:	Not assessed
