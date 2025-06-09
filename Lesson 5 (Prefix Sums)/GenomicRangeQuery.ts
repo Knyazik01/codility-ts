@@ -71,7 +71,7 @@ export function solution(S: string, P: number[], Q: number[]): number[] {
 /*
   Tricky solution (using positions)
   * Codility analysis: https://app.codility.com/demo/results/trainingJJCF98-RN3/
-  * Task score:	100%
+  * Task score:	  100%
 
   * Correctness:	100%
   * Performance:	100%
